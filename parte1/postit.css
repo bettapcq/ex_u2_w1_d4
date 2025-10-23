@@ -1,0 +1,93 @@
+body {
+  font-family: 'Indie Flower', cursive;
+  font-weight: 400;
+  font-style: normal;
+  background-color: rgb(120, 96, 96);
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 60%;
+  background-color: grey;
+  padding: 2em;
+  box-shadow: 0px 4px 23px -3px rgba(0, 0, 0, 0.75);
+  margin: 3em;
+}
+
+.post-it {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+  padding: 1em;
+  width: 150px;
+  height: 100px;
+  box-shadow: 0px 4px 23px -3px rgba(0, 0, 0, 0.75);
+}
+
+.post-it h1 {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+  margin-left: 0.3em;
+}
+
+.pink {
+  background: linear-gradient(182deg, #f9ccf0 50%, #c3c2c2 98%);
+  transform: rotate(353deg);
+}
+
+.yellow {
+  background: linear-gradient(182deg, #f9f1cc 50%, #c3c2c2 98%);
+  transform: rotate(5deg);
+}
+
+.green {
+  background: linear-gradient(182deg, #ccf9d0 50%, #c3c2c2 98%);
+  transform: rotate(354deg);
+}
+
+.blue {
+  background: linear-gradient(182deg, #cceaf9 50%, #c3c2c2 98%);
+  transform: rotate(2deg);
+}
+
+.post-it:hover {
+  transform: scale(1.3);
+  z-index: 1;
+  box-shadow: 0px 4px 80px -3px rgba(0, 0, 0, 0.75);
+}
+
+@keyframes stick-to-the-wall {
+  from {
+    transform: scale(6);
+    visibility: 0%;
+  }
+
+  90% {
+    opacity: 50%;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 100%;
+  }
+}
+
+.blue {
+  animation: stick-to-the-wall 0.7s linear;
+}
+.pink {
+  animation: stick-to-the-wall 0.7s linear 0.5s;
+}
+.green {
+  animation: stick-to-the-wall 0.7s linear 0.7s;
+}
+.yellow {
+  animation: stick-to-the-wall 0.7s linear 0.9s;
+}
