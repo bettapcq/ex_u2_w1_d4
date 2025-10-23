@@ -66,21 +66,18 @@ main {
 @keyframes stick-to-the-wall {
   from {
     transform: scale(6);
-    visibility: 0%;
-  }
-
-  90% {
-    opacity: 50%;
+    z-index: 1;
   }
 
   to {
     transform: scale(1);
     opacity: 100%;
+    z-index: 0;
   }
 }
 
 .blue {
-  animation: stick-to-the-wall 0.7s linear;
+  animation: stick-to-the-wall 0.7s linear 0s;
 }
 .pink {
   animation: stick-to-the-wall 0.7s linear 0.5s;
